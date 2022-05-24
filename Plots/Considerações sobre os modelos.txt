@@ -1,0 +1,46 @@
+--------------2 dense layer layers---------------- 
+//dropout 0.0, 0.0//
+//neurons: 40, 40// 
+
+- Letra U sendo confundida com R, de resto todas as letras estão com uma boa precisão
+- Letra D sendo confundida com G
+
+//dropout 0.0, 0.1// 
+//neurons: 40, 40// 
+
+- Letra U sendo confundida com R
+
+//dropout 0.1, 0.1//
+//neurons: 40, 40// 
+
+- Alguma imprecisão entre F e T (Repetir testes de precisão e tirar conclusões)
+
+
+--------------3 dense layer layers---------------- 
+//dropout 0.1, 0.1, 0.1// 
+//neurons: 40, 20, 10// 
+*MELHOR MODELO ATÉ O MOMENTO*
+
+- Todos os sinais sendo corretamente detectados
+
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+dense (Dense)                (None, 40)                1720      
+_________________________________________________________________
+dropout (Dropout)            (None, 40)                0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 20)                820       
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 20)                0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 10)                210       
+_________________________________________________________________
+dense_3 (Dense)              (None, 25)                275       
+=================================================================
+Total params: 3,025
+Trainable params: 3,025
+Non-trainable params: 0
+
+
